@@ -36,3 +36,8 @@ button {
   color: white;
   border: none;
 }
+
+.toogleTodo {
+  width: 150px;
+  padding: 6px;
+}

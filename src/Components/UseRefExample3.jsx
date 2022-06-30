@@ -8,7 +8,9 @@ const UseRefExample3 = () => {
   return (
     <div>
       {showTodo && <Todo />}
-      <button onClick={() => setShowTodo(!showTodo)}>Toogle Todo</button>
+      <button className="toogleTodo" onClick={() => setShowTodo(!showTodo)}>
+        Toogle Todo
+      </button>
     </div>
   );
 };
