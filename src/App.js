@@ -1,5 +1,7 @@
+import UseRefExample1 from "./Components/UseRefExample1";
+
 function App() {
-  return <div>Assalomu alaykum</div>;
+  return <UseRefExample1 />;
 }
 
 export default App;
