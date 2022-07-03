@@ -9,7 +9,7 @@ function App() {
       {/* <UseRefExample1 /> */}
       {/* <UseRefExample2 /> */}
       {/* <UseRefExample3 /> */}
-      <UseMemo />
+      {/* <UseMemo /> */}
     </>
   );
 }
