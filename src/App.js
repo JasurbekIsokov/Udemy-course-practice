@@ -4,6 +4,7 @@ import UseRefExample3 from "./Components/UseRefExample3";
 import UseMemo from "./Components/UseMemo";
 
 import CostumeHooksExample1 from "./Components/CostumeHooksExample1";
+import CustomHookExample2 from "./Components/CustomHookExample2";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <UseRefExample2 /> */}
       {/* <UseRefExample3 /> */}
       {/* <UseMemo /> */}
-      <CostumeHooksExample1 />
+      {/* <CostumeHooksExample1 /> */}
+      <CustomHookExample2 />
     </>
   );
 }
