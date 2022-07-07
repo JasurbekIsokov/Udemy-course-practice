@@ -4,17 +4,19 @@ const CustomHookExample2 = () => {
   const [task, setTask] = useLocalStorage("task", "");
   const [tasks, setTasks] = useLocalStorage("tasks", []);
 
+  // input change bo'lganda valueni storagega saqalaydi .
+  // form submit bo'lganda valuelarni storagega array ichida obect qilib saqlaydi
   const onSubmit = (e) => {
     e.preventDefault();
 
     const taskObj = {
       task,
       completed: false,
-      date: new Date().getTime(),
+      date: new Date().getTime(), // key yoki id uchun
     };
 
-    console.log(taskObj.date);
-
+    // tasks ni spred operatori (...) orqali yoydik bu bizga localStorage dagi malumotlarni
+    // ustma-ust (overwrite) qlib tozmasdan hammsini alohida yozish uchun hizmat qiladi.
     setTasks([...tasks, taskObj]);
   };
 

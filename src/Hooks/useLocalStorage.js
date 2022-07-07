@@ -21,6 +21,7 @@ const useLocalStorage = (key, initialValue) => {
   return [localStorageValue, setValue];
 };
 
+// localStoragedan malumotlarni keyi orqali oluvchi function
 function getLocalStorageValue(key, initialValue) {
   const itemFromStorage = localStorage.getItem(key);
   return itemFromStorage ? JSON.parse(itemFromStorage) : initialValue;
