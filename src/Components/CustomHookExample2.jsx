@@ -7,25 +7,35 @@ const CustomHookExample2 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
+  
     const taskObj = {
       task,
       completed: false,
-      date: new Date().toLocaleDateString(),
+      date: new Date().getTime(),
     };
 
-    setTasks([...task, taskObj]);
+    console.log(taskObj.date);
+
+    setTasks([...tasks, taskObj]);
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label htmlFor="text">Task</label>
-      <input
-        type="text"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-      />
-      <button>Submit</button>
-    </form>
+    <>
+      <form onSubmit={onSubmit}>
+        <label htmlFor="text">Task</label>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+        />
+        <button>Submit</button>
+      </form>
+      <hr />
+
+      {tasks.map((task) => (
+        <h3 key={task.date}>{task.task}</h3>
+      ))}
+    </>
   );
 };
 
