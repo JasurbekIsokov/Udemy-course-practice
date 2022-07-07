@@ -7,7 +7,6 @@ const CustomHookExample2 = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-  
     const taskObj = {
       task,
       completed: false,
